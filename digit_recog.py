@@ -22,7 +22,7 @@ T=torchvision.transforms.Compose([
     torchvision.transforms.ToTensor()
 ])
 
-train_data=torchvision.datasets.MNIST('mnist_data',train=True, download=False,transform=T)
+train_data=torchvision.datasets.MNIST('mnist_data',train=True, download=True,transform=T)
 val_data=torchvision.datasets.MNIST('mnist_data',train=False, download=False,transform=T)
 
 train_dl=torch.utils.data.DataLoader(train_data,batch_size=BATCH)
@@ -151,7 +151,7 @@ def inference(path,model,device):
         return F.softmax(pred,dim=-1).cpu().numpy()
 
 
-path="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKICfgET5UEc9LdUOEe8o8eanmZLzu6fc3UxKghpd4c8zhShctWo1hJzOBZCtC45PinxY&usqp=CAU"
+path="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ__r7w774D4mv13E04MeNFrPkSfIKUHRtXvQ&usqp=CAU"
 
 pred=inference(path,lenet,device=device)
 pred_idx=np.argmax(pred)

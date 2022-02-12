@@ -23,7 +23,7 @@ T=torchvision.transforms.Compose([
     torchvision.transforms.ToTensor()
 ])
 
-train_data=torchvision.datasets.MNIST('mnist_data',train=True, download=False,transform=T)
+train_data=torchvision.datasets.MNIST('mnist_data',train=True, download=True,transform=T)
 val_data=torchvision.datasets.MNIST('mnist_data',train=False, download=False,transform=T)
 
 train_dl=torch.utils.data.DataLoader(train_data,batch_size=BATCH)
