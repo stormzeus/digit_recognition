@@ -4,12 +4,10 @@
 
 A simple CNN model for recognising digits. 
 
-Pass a image path to the model for testing 
+Draw an image on the pygame. The CNN model is attempt to identify the digit.
 
 
-## Future Scope: 
 
-Implement a GUI for drawing images instead of passing a link to image
 
 # Install Dependencies
 
